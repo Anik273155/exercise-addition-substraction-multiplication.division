@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .btn{
+        text-align:center;
+        display:flex;
+        align-items:center; 
+        background-color:papayawhip;;
+        
+    }
+    #response{
+        background-color:blue;
+        color:white;
+        border-radius:5px;
+    }
+    #answer1{
+        background:papayawhip;
+    }
+    .box-container{
+        border:4px solid black;
+        height:240px;
+        width:177px;
+        background-color:aliceblue;
+         
+    }
+    </style>
+</head>
+<body>
+    <div class="box-container">
+        
+    Input A :
+    <input type="text" class="btn"id="btn1"value="">
+    <br><br>
+    Input B :
+    <input type="text" class="btn"id="btn2"value="">
+    <br><br>
+    <input type="button"onclick="myfunc1()"id="response"value="Sum">
+    <input type="button"onclick="myfunc2()"id="response"value="Sub">
+    <input type="button"onclick="myfunc3()"id="response"value="Mul">
+    <input type="button"onclick="myfunc4()"id="response"value="Div">
+    <br><br>
+
+    Result:
+    <br>
+  <input type="text"id="answer1"value="">
+  </div>
+<script>
+
+
+
+
+function myfunc1(){
+    var sum=0;
+    
+
+    var A=parseFloat(document.querySelector('#btn1').value);
+     var B=parseFloat(document.querySelector('#btn2').value);
+
+    
+    sum=A+B;
+   
+   document.getElementById('answer1').value=sum;
+}
+ function myfunc2(){
+     var sub=0;
+     var A= parseFloat(document.getElementById('btn1').value);
+     var B=parseFloat(document.getElementById('btn2').value);
+     sub=A-B;
+     document.getElementById('answer1').value=sub;
+
+ }
+ function myfunc3(){
+     var mul=0;
+     var A= parseFloat(document.getElementById('btn1').value);
+     var B=parseFloat(document.getElementById('btn2').value);
+     mul=A*B;
+     document.getElementById('answer1').value=mul;
+
+ }
+ function myfunc4(){
+     var div=0;
+     var A= parseFloat(document.getElementById('btn1').value);
+     var B=parseFloat(document.getElementById('btn2').value);
+     if(B!=0){
+     div=A/B;
+     document.getElementById('answer1').value=div;
+     }
+     else{
+        var x=error;
+        document.getElementById('answer1').value=x;
+     }
+ }
+
+</script>
+</body>
+</html>
